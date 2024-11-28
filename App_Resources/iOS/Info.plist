@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>What did you get done this week?</string>
+    <key>CFBundleExecutable</key>
+    <string>${EXECUTABLE_NAME}</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>${PRODUCT_NAME}</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    
+    <!-- Required privacy descriptions -->
+    <key>NSCameraUsageDescription</key>
+    <string>We need access to your camera to capture photos and videos for your weekly entries.</string>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need access to your microphone to record audio for your weekly entries.</string>
+    
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We use your location to enhance your weekly entries.</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library to save and access media for your weekly entries.</string>
+    
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>We need permission to save photos and videos to your library.</string>
+    
+    <key>NSUserNotificationUsageDescription</key>
+    <string>We send weekly reminders to help you track your accomplishments.</string>
+    
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>We use speech recognition to transcribe your weekly entries.</string>
+
+    <!-- Background modes for notifications -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>remote-notification</string>
+    </array>
+    
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+</dict>
+</plist>

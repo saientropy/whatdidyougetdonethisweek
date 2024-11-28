@@ -1,0 +1,51 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="What did you get done this week?" class="bg-purple-600 text-white" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="{{ currentDate }}" class="text-xl font-bold mb-4 text-purple-800" />
+            
+            <TextView hint="Share your accomplishments for this week..." 
+                     text="{{ entryText }}" 
+                     height="200" 
+                     class="mb-4 p-4 bg-white border rounded-lg" 
+                     editable="true" />
+            
+            <GridLayout columns="*, *, *" rows="auto" class="mb-4">
+                <Button text="🎤 Record" 
+                        tap="{{ onRecord }}" 
+                        col="0" 
+                        class="m-1 bg-blue-500 text-white" />
+                <Button text="📷 Photo" 
+                        tap="{{ onTakePhoto }}" 
+                        col="1" 
+                        class="m-1 bg-green-500 text-white" />
+                <Button text="🎥 Video" 
+                        tap="{{ onRecordVideo }}" 
+                        col="2" 
+                        class="m-1 bg-red-500 text-white" />
+            </GridLayout>
+            
+            <ScrollView orientation="horizontal" 
+                       class="mb-4" 
+                       visibility="{{ mediaItems.length > 0 ? 'visible' : 'collapsed' }}">
+                <StackLayout orientation="horizontal">
+                    <Repeater items="{{ mediaItems }}">
+                        <Repeater.itemTemplate>
+                            <Image src="{{ url }}" 
+                                   width="100" 
+                                   height="100" 
+                                   class="m-1 rounded" 
+                                   stretch="aspectFill" />
+                        </Repeater.itemTemplate>
+                    </Repeater>
+                </StackLayout>
+            </ScrollView>
+            
+            <Button text="{{ isSaving ? 'Saving...' : 'Save Weekly Entry' }}" 
+                    tap="{{ onSave }}" 
+                    isEnabled="{{ !isSaving }}"
+                    class="{{ isSaving ? 'bg-gray-400' : 'bg-purple-600' }} text-white p-4 rounded-lg" />
+        </StackLayout>
+    </ScrollView>
+</Page>
